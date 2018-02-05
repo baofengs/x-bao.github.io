@@ -212,6 +212,7 @@ html {
   color: #555;
   font-style: normal;
   text-rendering: optimizeLegibility;
+  text-shadow: 0 1px 0 #fff;
 }
 html.index {
   background-color: #fff;
@@ -432,13 +433,13 @@ video {
 .echo kbd {
   display: inline-block;
   margin: 0 0.1em;
-  padding: 0 0.5em;
+  padding: 0.2em 0.5em;
   border: 1px solid #f0f0f0;
   border-radius: 3px;
   background-color: #fcfcfc;
   text-shadow: 0 1px 0 #fff;
   white-space: nowrap;
-  font-size: 0.85em;
+  font-size: 0.8em;
   line-height: 1.1;
   vertical-align: text-bottom;
   font-family: consolas, "微软雅黑";
@@ -580,6 +581,24 @@ video {
   background-color: #399c9c;
   line-height: 120px;
   box-sizing: border-box;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+.foot {
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+.foot .link {
+  color: #fff;
+}
+.foot .link:hover {
+  text-decoration: underline;
+}
+.foot-theme {
+  margin-top: 1rem;
 }
 .head-title {
   font-size: 30px;
@@ -614,7 +633,7 @@ video {
 }
 .comments {
   margin: 30px 0;
-  padding: 50px;
+  padding: 10px 50px;
   background-color: #fff;
   border: 1px solid #f0f0f0;
 }
@@ -699,7 +718,7 @@ video {
   overflow: hidden;
   margin-top: 30px;
   border: 1px solid #f0f0f0;
-  background-color: #fff;
+  background-color: $content-bg-colo;
 }
 .post__head {
   margin: 50px;
