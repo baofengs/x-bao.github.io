@@ -43,7 +43,6 @@ $(function () {
 						}
 					});
 				}
-
 				break;
 
 			case 75: // k up
@@ -58,27 +57,30 @@ $(function () {
 						}
 					});
 				}
-
 				break;
-
 			case 191: // shift + / = ? show help modal
 				break;
-
 				// 16 shift
 			case 84: // t
 				window.scrollToTop(1);
 				break;
-
 			case 66: // b
 				window.scrollToBottom();
 				break;
-
 			case 78: // n half
 				window.scrollPageDown(1);
 				break;
-
 			case 77: // m
 				window.scrollPageUp(1);
+				break;
+			case 219: // [
+				window.history.back(-1);
+				break;
+			case 221: // ]
+				window.history.go(1);
+				break;
+			case 72: // h
+				window.location = '/archives';
 				break;
 		}
 
