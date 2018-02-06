@@ -110,7 +110,7 @@ $(function () {
                         $navH1.fadeIn(600);
                     });
 
-    $('.head-nav__link').on('click', function(e) {
+    $('.index-nav__link').on('click', function(e) {
         e.preventDefault();
         var $this = $(this);
         

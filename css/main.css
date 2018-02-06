@@ -214,6 +214,7 @@ html {
   font-style: normal;
   text-rendering: optimizeLegibility;
   text-shadow: 0 1px 0 #fff;
+  -webkit-font-smoothing: antialiased;
 }
 html.index {
   background-color: #fff;
@@ -714,6 +715,56 @@ summary:hover {
 }
 .post-nav .next {
   right: 15px;
+}
+.index-nav__list {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  position: relative;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+.index-nav__list .hidden {
+  visibility: hidden;
+}
+.index-nav__list .index-nav__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  background: #fff;
+  line-height: 50px;
+  display: inline;
+  transition: top 0.2s;
+}
+.index-nav__list .index-nav__item > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: scale 0.5s ease;
+}
+.index-nav__list .index-nav__item > a:hover {
+  color: #41b2b2;
+}
+.index-nav__list:hover .index-nav__item {
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.075);
+}
+.index-nav__list:hover .Github {
+  top: -94px;
+  transform: perspective(125px) rotateX(25deg);
+}
+.index-nav__list:hover .Diary {
+  top: -42.4px;
+  transform: perspective(125px) rotateX(-25deg);
+}
+.index-nav__list:hover .Blog {
+  top: 0;
+  transform: perspective(125px) rotateX(25deg);
+}
+.index-nav__list:hover .Resume {
+  top: 50.1px;
+  transform: perspective(125px) rotateX(-25deg);
 }
 .excerpt {
   margin-top: 20px;
