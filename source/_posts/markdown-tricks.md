@@ -55,11 +55,25 @@ tags: [Markdown, tricks]
 ```Markdown
 - [ ] Eat
 - [x] Code
-  - [x] HTML
-  - [x] CSS
-  - [x] JavaScript
-- [ ] Sleep
 ```
 
-![markdown todo](https://i.loli.net/2018/02/06/5a79793862e3f.png)
+![markdown todo](https://i.loli.net/2018/02/07/5a79df0c4c576.png)
+
+
+## 插入一个网页
+
+其实就是添加一个 `<iframe>`，但是有几点需要注意一下
+
+- 插入到`<iframe>`中 URL 链接，如果含有 *query string*类型参数，则必须将 *&* 转化为 ***`&amp;`***
+- `<iframe> </iframe>`两个 *tag* 之间须留有空格，不要问为什么，都是这么说的，我也是这么做的
+- `<iframe>`的结束标签一定要加上
+	如果最后两点有问题，都会导致 `<iframe>` 标签之后的内容无法显示
+
+```Markdown
+<iframe src="https://x-bao.github.io/awesome-css/colorfule%20black/index.html"  frameborder="1" scrolling="no"> </iframe>
+```
+
+<iframe src="https://x-bao.github.io/awesome-css/colorfule%20black/index.html"  frameborder="1" scrolling="no"> </iframe>
+
+
 
