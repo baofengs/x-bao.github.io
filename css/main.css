@@ -684,6 +684,17 @@ video {
   box-shadow: 0 1px 5px rgba(50,50,50,0.2);
   border-color: transparent;
 }
+iframe {
+  width: 100%;
+  min-height: 250px;
+}
+summary {
+  outline: none;
+  display: inline-block;
+}
+summary:hover {
+  cursor: pointer;
+}
 .excerpt {
   margin-top: 20px;
 }
@@ -1023,7 +1034,7 @@ video {
   }
   .post__main blockquote,
   .post__main .highlight {
-    margin: 30px -20px;
+    margin: 30px -11px;
     padding: 20px;
   }
   .post__foot {
@@ -1059,5 +1070,8 @@ video {
   }
   .comments {
     padding: 0 10px;
+  }
+  iframe {
+    min-height: 310px;
   }
 }
