@@ -695,6 +695,25 @@ summary {
 summary:hover {
   cursor: pointer;
 }
+.post-nav .nav-item {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  color: #ccc;
+  transition: all 350ms ease;
+}
+.post-nav .nav-item:hover {
+  color: #444;
+}
+.post-nav .prev {
+  left: 15px;
+}
+.post-nav .next {
+  right: 15px;
+}
 .excerpt {
   margin-top: 20px;
 }
@@ -766,6 +785,10 @@ summary:hover {
 }
 .post__main .headerlink {
   display: inline-block;
+}
+.post__main .headerlink::before {
+  content: '';
+  margin-right: 5px;
 }
 .post__main img {
   cursor: pointer;
@@ -1073,5 +1096,8 @@ summary:hover {
   }
   iframe {
     min-height: 310px;
+  }
+  .post-nav {
+    display: none;
   }
 }

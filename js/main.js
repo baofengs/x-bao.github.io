@@ -29,6 +29,9 @@ $(function () {
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
 		// console.log(e.which, 'key down');
+		var postNav = document.querySelector('.post-nav');
+		var postNavLeft = postNav.querySelector('.prev');
+		var postnavRight = postNav.querySelector('.next');
 
 		switch (e.which) {
 			case 74: // j down
@@ -74,10 +77,14 @@ $(function () {
 				window.scrollPageUp(1);
 				break;
 			case 219: // [
-				window.history.back(-1);
+				if (postNavLeft && postNavLeft.href) {
+					window.location = postNavLeft.href;
+				}
 				break;
 			case 221: // ]
-				window.history.go(1);
+				if (postnavRight && postnavRight.href) {
+					window.location = postnavRight.href;
+				}
 				break;
 			case 72: // h
 				window.location = '/archives';
