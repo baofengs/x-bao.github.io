@@ -100,8 +100,8 @@ $(function () {
 	});
 
 
-	var textarea = document.querySelector('#commments').querySelector('textarea');
-	console.log(textarea, textarea.focus());
+	// var textarea = document.querySelector('#commments').querySelector('textarea');
+	// console.log(textarea, textarea.focus());
 
 	// print hint
 
