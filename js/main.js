@@ -26,6 +26,10 @@ $(function () {
 	// i  go index
 	var $body = $('html');
 
+	const checkFocus = () => {
+		return document.querySelector('#comment textarea').focus();
+	}
+
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
 		// console.log(e.which, 'key down');
@@ -37,6 +41,7 @@ $(function () {
 
 		switch (e.which) {
 			case 74: // j down
+				console.log('checkFocus: ', checkFocus());
 				if (!isKeydown) {
 					isKeydown = true;
 					requestAnimationFrame(function animate() {
