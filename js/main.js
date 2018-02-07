@@ -26,9 +26,7 @@ $(function () {
 	// i  go index
 	var $body = $('html');
 
-	let isFocused = false;
-	$('#comments textarea').focus(() => {console.log('textarea focused...'); isFocused = true});
-	$('#comments textarea').blur(() => {console.log('textarea blured...'); isFocused = false});
+	var isFocused = false;
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
@@ -112,6 +110,9 @@ $(function () {
 	$body.on('keyup', function (e) {
 		isKeydown = false;
 	});
+
+	$('#comments textarea').focus(() => {console.log('textarea focused...'); isFocused = true});
+	$('#comments textarea').blur(() => {console.log('textarea blured...'); isFocused = false});
 
 
 	// var textarea = document.querySelector('#commments').querySelector('textarea');
