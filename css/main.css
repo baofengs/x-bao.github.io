@@ -224,7 +224,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.5;
   font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
-  padding: 80px 0 20px;
+  padding: 30px 0 20px;
 }
 html.index body {
   padding: 0;
@@ -397,9 +397,12 @@ video {
 .echo td,
 .echo th {
   border: 1px solid #cbcbcb;
-  padding: 0.5em 1em;
+  padding: 0.4rem;
   text-align: left;
   font-weight: normal;
+}
+.echo th {
+  font-weight: bold;
 }
 .echo tfoot {
   background-color: #f4f4f4;
@@ -466,13 +469,98 @@ video {
   overflow: auto;
   color: #399c9c;
   border: 1px solid #f0f0f0;
+  position: relative;
+}
+.highlight:hover {
+  box-shadow: 0 1px 5px rgba(50,50,50,0.2);
+}
+.highlight::after {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  padding: 2px 7px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #b8b8b8;
+  text-shadow: none;
+  content: 'Code';
+  text-align: right;
+}
+.highlight.html::after {
+  content: "HTML";
+}
+.highlight.js::after {
+  content: "JavaScript";
+}
+.highlight.bash::after {
+  content: "Bash";
+}
+.highlight.css::after {
+  content: "CSS";
+}
+.highlight.scss::after {
+  content: "Scss";
+}
+.highlight.java::after {
+  content: "Java";
+}
+.highlight.xml::after {
+  content: "XML";
+}
+.highlight.python::after {
+  content: "Python";
+}
+.highlight.json::after {
+  content: "JSON";
+}
+.highlight.swift::after {
+  content: "Swift";
+}
+.highlight.ruby::after {
+  content: "Ruby";
+}
+.highlight.php::after {
+  content: "PHP";
+}
+.highlight.c::after {
+  content: "C";
+}
+.highlight.cpp::after {
+  content: "C++";
+}
+.highlight.scheme::after {
+  content: "Scheme";
+}
+.highlight.objectivec::after {
+  content: "Objective-C";
+}
+.highlight.yml::after {
+  content: "YAML";
+}
+.highlight.stylus::after {
+  content: "Stylus";
+}
+.highlight.sql::after {
+  content: "SQL";
+}
+.highlight.http::after {
+  content: "HTTP";
+}
+.highlight.go::after {
+  content: "Go";
+}
+.highlight.markdown::after {
+  content: "Markdown";
 }
 .highlight .gutter {
-  color: #666;
-  display: none;
+  color: #fff;
+  text-shadow: none;
+  background-color: #399c9c;
+  width: 1em;
+  text-align: center;
 }
 .highlight .code {
-  padding: 1em 45px;
+  padding: 15px;
 }
 .highlight figcaption {
   margin-bottom: 1em;
@@ -542,6 +630,34 @@ video {
 }
 .highlight .marked {
   background-color: #ffecec;
+}
+table {
+  padding: 0;
+}
+table tr {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+table tr th {
+  font-weight: bold;
+  margin: 0;
+  padding: 6px 13px;
+}
+table tr td {
+  margin: 0;
+  padding: 6px 13px;
+}
+table tr th :first-child,
+table tr td :first-child {
+  margin-top: 0;
+}
+table tr th :last-child,
+table tr td :last-child {
+  margin-bottom: 0;
 }
 /* ==========================================================================
    Partial
@@ -748,10 +864,10 @@ summary:hover {
   transition: all 0.2s ease;
 }
 .post-nav .prev {
-  left: 15px;
+  left: 0;
 }
 .post-nav .next {
-  right: 15px;
+  right: 0;
 }
 .index-nav__list {
   display: inline-block;
@@ -841,7 +957,7 @@ summary:hover {
   overflow: hidden;
   margin-top: 30px;
   border: 1px solid #f0f0f0;
-  background-color: $content-bg-colo;
+  background-color: #fff;
 }
 .post__head {
   margin: 50px;
@@ -891,16 +1007,11 @@ summary:hover {
 .post__main img:hover {
   box-shadow: 0 0 1px #ccc;
 }
-.post__main .highlight {
-  margin: 1.6em -60px;
-  padding: 15px;
-}
 .post__main .highlight figcaption {
   padding: 0 45px;
 }
 .post__main .highlight table {
   margin: 0;
-  width: auto;
   border: none;
 }
 .post__main .highlight td,
@@ -1149,11 +1260,6 @@ summary:hover {
     font-size: 22.4px;
     font-size: 1.4rem;
   }
-  .post__main blockquote,
-  .post__main .highlight {
-    margin: 30px -11px;
-    padding: 20px;
-  }
   .post__foot {
     position: relative;
     padding: 10px;
@@ -1183,7 +1289,7 @@ summary:hover {
     margin: 20px;
   }
   .highlight .code {
-    padding: 0;
+    padding-left: 5px;
   }
   .comments {
     padding: 0 10px;
