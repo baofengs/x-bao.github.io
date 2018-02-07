@@ -30,6 +30,7 @@ $(function () {
 		return ;
 	}
 	$('#comments textarea').focus(() => {console.log('textarea focused...')});
+	$('#comments textarea').blur(() => {console.log('textarea blured...')});
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
