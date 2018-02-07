@@ -41,7 +41,6 @@ $(function () {
 
 		switch (e.which) {
 			case 74: // j down
-				console.log('checkFocus: ', checkFocus());
 				if (!isFocused && !isKeydown) {
 					isKeydown = true;
 					requestAnimationFrame(function animate() {
