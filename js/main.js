@@ -27,7 +27,7 @@ $(function () {
 	var $body = $('html');
 
 	const checkFocus = () => {
-		return document.querySelector('#comment textarea').focus();
+		return document.querySelector('#comments textarea').focus();
 	}
 
 	var isKeydown = false;
