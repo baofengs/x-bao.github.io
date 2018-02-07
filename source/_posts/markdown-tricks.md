@@ -6,11 +6,13 @@ tags: [Markdown, tricks]
 
 作为一个合格的程序猿，怎么能不写 Markdown？！感觉没有 Markdown 完全没法扣字，有木有🍕
 
+Markdown 所提供的功能完全可以 cover 平时笔记、邮件等扣字的需求，但是如果再来一丢丢小技巧啥的，会让你生成的文本更加丰富绚丽
+
 这里总结了我平时常用的一些 Markdown 的奇技淫巧，持续更新~
 
 ## 给表格加一个空行
 
-```Markdown
+```html
 | key | value |
 |-----|-------|
 | foo | bar   |
@@ -30,13 +32,13 @@ tags: [Markdown, tricks]
 
 `<details>`中的内容表现和`<pre>`标签一样，都是原文输出。也就是说，`<details>`中的 Markdown 是不会被解析的
 
-```HTML
+```html
 <details>
-	<summary>click me</summary>
-	* 因为我刚好遇见你
-	* 留下足迹才美丽
-	* 分吹花落泪如雨
-	* 因为不想分离
+    <summary>click me</summary>
+    * 因为我刚好遇见你
+    * 留下足迹才美丽
+    * 分吹花落泪如雨
+    * 因为不想分离
 </details>
 ```
 
@@ -69,7 +71,7 @@ tags: [Markdown, tricks]
 - `<iframe>`的结束标签一定要加上
 	如果最后两点有问题，都会导致 `<iframe>` 标签之后的内容无法显示
 
-```Markdown
+```html
 <iframe src="https://x-bao.github.io/awesome-css/colorfule%20black/index.html"  frameborder="1" scrolling="no"> </iframe>
 ```
 

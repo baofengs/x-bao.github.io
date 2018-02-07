@@ -78,7 +78,7 @@ p {
 ```CSS
 .radial-gradient {
     width: 240px;
-    height: 80ox;
+    height: 80px;
     background: radial-gradient(red, yellow, rgb(30, 144, 255))
 }
 ```
