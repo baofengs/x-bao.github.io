@@ -708,13 +708,20 @@ summary:hover {
   align-items: center;
   font-size: 80px;
   color: #ccc;
-  transition: all 350ms ease;
 }
 .post-nav .nav-item:hover {
   color: #444;
 }
 .post-nav .nav-item:hover .nav-item-title {
   display: block;
+}
+.post-nav .nav-item:hover .icon-arrow-left,
+.post-nav .nav-item:hover .nav-item-title-left {
+  transform: translateX(-0.5rem);
+}
+.post-nav .nav-item:hover .icon-arrow-right,
+.post-nav .nav-item:hover .nav-item-title-right {
+  transform: translateX(0.5rem);
 }
 .post-nav .nav-item-title {
   position: absolute;
@@ -727,6 +734,7 @@ summary:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   display: none;
+  transition: all 0.2s ease-in;
 }
 .post-nav .nav-item-title-left {
   left: 75%;
@@ -735,17 +743,15 @@ summary:hover {
   right: 75%;
   text-align: right;
 }
+.post-nav .nav-item .icon-arrow-right,
+.post-nav .nav-item .icon-arrow-left {
+  transition: all 0.2s ease;
+}
 .post-nav .prev {
   left: 15px;
 }
-.post-nav .prev:hover {
-  transform: translateX(-1rem);
-}
 .post-nav .next {
   right: 15px;
-}
-.post-nav .next:hover {
-  transform: translateX(1rem);
 }
 .index-nav__list {
   display: inline-block;
