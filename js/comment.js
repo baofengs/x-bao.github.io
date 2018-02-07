@@ -9,7 +9,3 @@ const gitment = new Gitment({
 })
 
 gitment.render('comments')
-
-var textarea = document.querySelector('#comments textarea');
-
-console.log(textarea, textarea.focus());
