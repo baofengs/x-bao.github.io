@@ -30,8 +30,10 @@ $(function () {
 	$body.on('keydown', function (e) {
 		// console.log(e.which, 'key down');
 		var postNav = document.querySelector('.post-nav');
-		var postNavLeft = postNav.querySelector('.prev');
-		var postnavRight = postNav.querySelector('.next');
+		if (postNav) {
+			var postNavLeft = postNav.querySelector('.prev');
+			var postnavRight = postNav.querySelector('.next');
+		}
 
 		switch (e.which) {
 			case 74: // j down
@@ -102,15 +104,15 @@ $(function () {
 	var comments = [
 		'',
 		'                    .::::.            快捷键：',
-		'                  .::::::::.              j：下移',
-		'                 :::::::::::              k：上移',
-		"             ..:::::::::::'               t：移到最顶",
-		"           '::::::::::::'                 b：移到最底",
-		'             .::::::::::                  n：下移很多',
-		"        '::::::::::::::..                 m：上移很多",
-		'             ..::::::::::::.		       [: 前一篇文章',
-		'           ``::::::::::::::::             ]: 后一篇文章',
-		"            ::::``:::::::::'        .:::. h: 回到文章列表页",
+		'                  .::::::::.              	j: 下移',
+		'                 :::::::::::              	k: 上移',
+		"             ..:::::::::::'               	t: 移到最顶",
+		"           '::::::::::::'                 	b: 移到最底",
+		'             .::::::::::                  	n: 下移很多',
+		"        '::::::::::::::..                 	m: 上移很多",
+		'             ..:::::::::::::. 			  	[: 前一篇文章',
+		'           ``:::::::::::::::::            	]: 后一篇文章',
+		"            ::::``:::::::::'        .:::. 	h: 回到文章列表页",
 		"           ::::'   ':::::'       .::::::::.",
 		"         .::::'      ::::     .:::::::'::::.",
 		"        .:::'       :::::  .::::::::'  ':::::.",
