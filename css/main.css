@@ -713,11 +713,39 @@ summary:hover {
 .post-nav .nav-item:hover {
   color: #444;
 }
+.post-nav .nav-item:hover .nav-item-title {
+  display: block;
+}
+.post-nav .nav-item-title {
+  position: absolute;
+  top: calc(50% - 8px);
+  font-size: 12px;
+  line-height: 1rem;
+  width: 11rem;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: none;
+}
+.post-nav .nav-item-title-left {
+  left: 75%;
+}
+.post-nav .nav-item-title-right {
+  right: 75%;
+  text-align: right;
+}
 .post-nav .prev {
   left: 15px;
 }
+.post-nav .prev:hover {
+  transform: translateX(-1rem);
+}
 .post-nav .next {
   right: 15px;
+}
+.post-nav .next:hover {
+  transform: translateX(1rem);
 }
 .index-nav__list {
   display: inline-block;
