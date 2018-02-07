@@ -27,8 +27,9 @@ $(function () {
 	var $body = $('html');
 
 	const checkFocus = () => {
-		return document.querySelector('#comments textarea').focus();
+		return ;
 	}
+	document.querySelector('#comments textarea').focus(() => {console.log('textarea focused...')});
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
