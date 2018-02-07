@@ -599,6 +599,9 @@ video {
 .foot .link:hover {
   text-decoration: underline;
 }
+.index-full-page {
+  overflow: hidden;
+}
 .foot-theme {
   margin-top: 1rem;
 }
@@ -750,21 +753,25 @@ summary:hover {
 .index-nav__list:hover .index-nav__item {
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.075);
 }
-.index-nav__list:hover .Github {
+.index-nav__list:hover .Diary {
   top: -94px;
   transform: perspective(125px) rotateX(25deg);
 }
-.index-nav__list:hover .Diary {
-  top: -42.4px;
+.index-nav__list:hover .Slaughter {
+  top: -43px;
   transform: perspective(125px) rotateX(-25deg);
 }
 .index-nav__list:hover .Blog {
   top: 0;
   transform: perspective(125px) rotateX(25deg);
 }
-.index-nav__list:hover .Resume {
+.index-nav__list:hover .Github {
   top: 50.1px;
   transform: perspective(125px) rotateX(-25deg);
+}
+.index-nav__list:hover .About {
+  top: 93.5px;
+  transform: perspective(125px) rotateX(25deg);
 }
 .excerpt {
   margin-top: 20px;
@@ -1152,5 +1159,46 @@ summary:hover {
   }
   .post-nav {
     display: none;
+  }
+  .index-nav.u-fr {
+    float: none;
+  }
+  .index-nav__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 30px;
+    margin-top: 8px;
+  }
+  .index-nav__list .hidden {
+    display: none;
+  }
+  .index-nav__list .index-nav__item {
+    order: 9;
+    width: auto;
+    position: static;
+    background: rgba(255,255,255,0.1);
+    line-height: 30px;
+    transition: top 0.2s;
+    padding: 0 5px;
+  }
+  .index-nav__list .index-nav__item > a {
+    color: #fff;
+  }
+  .index-nav__list .index-nav__item > a:hover {
+    color: #fff;
+  }
+  .index-nav__list .Blog {
+    order: 0;
+  }
+  .index-nav__list .Diary {
+    order: 1;
+  }
+  .index-nav__list .Slaughter {
+    order: 2;
   }
 }
