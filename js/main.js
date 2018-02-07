@@ -111,9 +111,9 @@ $(function () {
 		isKeydown = false;
 	});
 
-	$('#comments textarea').focus(() => {console.log('textarea focused...'); isFocused = true});
-	$('#comments textarea').blur(() => {console.log('textarea blured...'); isFocused = false});
-	window.scroll(0, 0);
+	// $('#comments textarea').focus(() => {console.log('textarea focused...'); isFocused = true});
+	// $('#comments textarea').blur(() => {console.log('textarea blured...'); isFocused = false});
+	// window.scroll(0, 0);
 
 
 	// var textarea = document.querySelector('#commments').querySelector('textarea');
