@@ -1,5 +1,5 @@
 const gitment = new Gitment({
-  id: window.location.pathname, // optional
+  id: window.location.pathname,
   owner: 'x-bao',
   repo: 'comments',
   oauth: {
