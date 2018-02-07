@@ -99,6 +99,10 @@ $(function () {
 		isKeydown = false;
 	});
 
+
+	var textarea = document.querySelector('#commments textarea');
+	console.log(textarea, textarea.focus());
+
 	// print hint
 
 	var comments = [
