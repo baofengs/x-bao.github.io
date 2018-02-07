@@ -27,6 +27,13 @@ $(function () {
 	var $body = $('html');
 
 	var isFocused = false;
+	// 输入评论时禁用快捷键
+	$('#comments textarea').focus(() => {
+		isFocused = true
+	});
+	$('#comments textarea').blur(() => {
+		isFocused = false
+	});
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
@@ -110,14 +117,6 @@ $(function () {
 	$body.on('keyup', function (e) {
 		isKeydown = false;
 	});
-
-	// $('#comments textarea').focus(() => {console.log('textarea focused...'); isFocused = true});
-	// $('#comments textarea').blur(() => {console.log('textarea blured...'); isFocused = false});
-	// window.scroll(0, 0);
-
-
-	// var textarea = document.querySelector('#commments').querySelector('textarea');
-	// console.log(textarea, textarea.focus());
 
 	// print hint
 
