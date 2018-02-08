@@ -118,7 +118,8 @@ $(function () {
         $navH1.fadeOut(100);
 
         $header.animate({
-            height: 0
+            height: 0,
+            padding: 0
         }, 800, function() {
             window.location.href = $this.attr('href');
         });
