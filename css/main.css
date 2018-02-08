@@ -1208,7 +1208,8 @@ summary:hover {
     margin-bottom: 20px;
     margin-top: 0px;
     padding: 0;
-    font-size: font-size: 0.75rem;;
+    font-size: 12px;
+    font-size: 0.75rem;
   }
   .head,
   .main,
