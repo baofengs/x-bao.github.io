@@ -693,7 +693,7 @@ table tr td :last-child {
   background-color: #399c9c;
   line-height: 120px;
   box-sizing: border-box;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.125);
 }
 .foot {
   line-height: 1;
@@ -1055,7 +1055,7 @@ summary:hover {
   color: #9c396b;
 }
 .post__tag__link:before {
-  content: "#";
+  content: "# ";
 }
 .post__more {
   padding: 10px 20px;
