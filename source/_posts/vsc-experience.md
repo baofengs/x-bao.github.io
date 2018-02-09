@@ -84,7 +84,6 @@ Ps: VS Code 配置文件跟 sublime 相比有一个特点，鼠标 *hover* 到�
     "editor.fontFamily": "Operator Mono",
     // Enables font ligatures
     "editor.fontLigatures": true,
-    // Controls whether the editor should render whitespace characters
     "editor.renderWhitespace": "boundary",
     "editor.fontSize": 12,
     "workbench.fontAliasing": "antialiased",
@@ -97,15 +96,8 @@ Ps: VS Code 配置文件跟 sublime 相比有一个特点，鼠标 *hover* 到�
         "editor.selectionBackground": "#406068"
     },
     "workbench.activityBar.visible": true,
-    // The number of spaces a tab is equal to. This setting is overriden
-    // based on the file contents when `editor.detectIndentation` is true.
     "editor.tabSize": 4,
-    // Insert spaces when pressing Tab. This setting is overriden
-    // based on the file contents when `editor.detectIndentation` is true.
     "editor.insertSpaces": true,
-    // When opening a file, `editor.tabSize` and `editor.insertSpaces`
-    // will be detected based on the file contents. Set to false to keep
-    // the values you've explicitly set, above.
     "editor.detectIndentation": false
 }
 ```
@@ -124,3 +116,9 @@ Ps: VS Code 配置文件跟 sublime 相比有一个特点，鼠标 *hover* 到�
 关于格式化，可以看看这个[How do you format code in Visual Studio Code (VSCode)](https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode)
 
 就这么多吧，其他的移步 google
+
+### 最后
+
+show 下我的 VS Code
+
+![VS Code](https://i.loli.net/2018/02/09/5a7d9df0d4fd6.png)

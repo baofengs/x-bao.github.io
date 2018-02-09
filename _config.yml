@@ -65,6 +65,10 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 Plugins:
 - hexo-generator-sitemap
+post_wordcount:
+  item_text: true
+  wordcount: true
+  min2read: true
 
 sitemap:
     path: sitemap.xml
