@@ -436,18 +436,12 @@ video {
 }
 .echo code,
 .echo kbd {
-  display: inline-block;
-  margin: 0 0.1em;
-  padding: 0.2em 0.5em;
-  border: 1px solid #f0f0f0;
+  background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
-  background-color: #fcfcfc;
-  text-shadow: 0 1px 0 #fff;
-  white-space: nowrap;
-  font-size: 0.8em;
-  line-height: 1.1;
-  vertical-align: text-bottom;
-  font-family: consolas, "微软雅黑";
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
+  padding: 0.1em 0.2em;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .echo kbd {
   box-shadow: 0 1px 0px #ccc, 0 0 0 2px #fff inset;
