@@ -2,6 +2,7 @@
 title: 文件对比神器 - Vimdiff
 date: 2018-02-09 00:34:49
 tags: [vimdiff, vim, 技巧]
+photos: ['https://i.loli.net/2018/02/09/5a7d70cbe4e20.jpg']
 ---
 
 作为一个命令行控，就是一切的一切都要搞个命令行工具，当然，文件对比也是一样
