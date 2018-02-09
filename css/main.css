@@ -961,14 +961,15 @@ summary:hover {
 }
 .post__time {
   color: #ccc;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: Georgia, serif;
 }
 .post__title {
   margin-top: 5px;
   line-height: 1.5;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 32px;
+  font-size: 2rem;
   font-weight: normal;
 }
 .post__title > a {
