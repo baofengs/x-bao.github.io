@@ -26,7 +26,18 @@ $(function () {
 	// i  go index
 	var $body = $('html');
 
-	var isFocused = window.isFocused;
+    var isFocused = window.isFocused;
+    
+    const textarea = $('#comments textarea');
+    window.isFocused = isFocused;
+    textarea.focus(() => {
+        console.log('is focused')
+        isFocused = true;
+    });
+    textarea.blur(() => {
+        console.log('is blured')
+        isFocused = false;
+    });
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
