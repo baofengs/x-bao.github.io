@@ -15,11 +15,11 @@ $(function () {
     window.isFocused = isFocused;
     textarea.on('focus', () => {
         console.log('is focused')
-        isFocused = true;
+        window.isFocused = true;
     });
     textarea.on('blur', () => {
         console.log('is blured')
-        isFocused = false;
+        window.isFocused = false;
     });
     
 });
