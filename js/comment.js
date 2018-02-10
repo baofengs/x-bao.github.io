@@ -9,9 +9,10 @@ $(function () {
         }
     });
     gitment.render('comments');
-    
+
     var isFocused = false;
     const textarea = $('#comments textarea');
+    window.isFocused = isFocused;
     textarea.on('focus', () => {
         console.log('is focused')
         isFocused = true;
@@ -20,5 +21,5 @@ $(function () {
         console.log('is blured')
         isFocused = false;
     });
-    window.isFocused = isFocused;
+    
 });
