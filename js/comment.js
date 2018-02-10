@@ -8,6 +8,17 @@ $(function () {
             client_secret: '5dac591999594c62d2e850b35fe0bcfa7e8fce04',
         }
     });
-
     gitment.render('comments');
+    
+    var isFocused = false;
+    const textarea = $('#comments textarea');
+    textarea.on('focus', () => {
+        console.log('is focused')
+        isFocused = true;
+    });
+    textarea.on('blur', () => {
+        console.log('is blured')
+        isFocused = false;
+    });
+    window.isFocused = isFocused;
 });

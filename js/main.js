@@ -26,23 +26,7 @@ $(function () {
 	// i  go index
 	var $body = $('html');
 
-	var isFocused = false;
-    // 输入评论时禁用快捷键
-    const txt = $('#comments textarea');
-    if (txt && txt.length > 0) {
-        console.log('xxxxxx');
-    }
-    if (txt && txt.length == 0) {
-        console.log('sssss');
-    }
-	$('#comments textarea').on('focus', () => {
-        console.log('is focused')
-		isFocused = true;
-	});
-	$('#comments textarea').on('blur', () => {
-        console.log('is blured')
-		isFocused = false;
-	});
+	var isFocused = window.isFocused;
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
