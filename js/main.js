@@ -29,10 +29,12 @@ $(function () {
 	var isFocused = false;
 	// 输入评论时禁用快捷键
 	$('#comments textarea').focus(() => {
-		isFocused = true
+        console.log('is focused')
+		isFocused = true;
 	});
 	$('#comments textarea').blur(() => {
-		isFocused = false
+        console.log('is blured')
+		isFocused = false;
 	});
 
 	var isKeydown = false;
