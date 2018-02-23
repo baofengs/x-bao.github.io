@@ -1,4 +1,4 @@
 ---
 title: trans-truth-equality-and-javascript
-tags:
+tags: [JavaScript, Truth, Equaity]
 ---

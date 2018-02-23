@@ -13,10 +13,10 @@ github: https://github.com/x-bao
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://sanbf.cn
+url: https://sanbaofengs.com
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults: https://sanbf.cn
+permalink_defaults: https://sanbaofengs.com
 
 # Directory
 source_dir: source
@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -84,13 +84,13 @@ deploy:
 - type: git
   repository: git@github.com:x-bao/x-bao.github.io
   branch: master
-- type: rsync
-  host: 112.74.50.54
-  user: bao
-  root: /var/www/blog
-  port: 22
-  delete: true
-  verbose: true
-  ignore_errors: true
+# - type: rsync
+#   host: 112.74.50.54
+#   user: bao
+#   root: /var/www/blog
+#   port: 22
+#   delete: true
+#   verbose: true
+#   ignore_errors: true
 
 

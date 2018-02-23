@@ -8,7 +8,7 @@ tags: [炫技篇, CSS]
 
 兼容性？搞笑吧。。。不存在的。
 
-<iframe src="https://x-bao.github.io/awesome-css/colorfule%20black/index.html"  frameborder="1" scrolling="no"> </iframe>
+<iframe src="https://sanbaofengs.com/awesome-css/colorfule%20black/index.html"  frameborder="1" scrolling="no"> </iframe>
 
 三行 CSS 搞定以上字体效果
 

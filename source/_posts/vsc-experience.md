@@ -69,6 +69,8 @@ Ps: VS Code 配置文件跟 sublime 相比有一个特点，鼠标 *hover* 到�
 
 ### 关闭右侧预览面板
 
+![editor.minimap](https://i.loli.net/2018/02/22/5a8ec04cc0763.png)
+
 ```json
 "editor.minimap.enabled": false
 ```
