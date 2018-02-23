@@ -11,17 +11,4 @@ $(function () {
         }
     });
     gitment.render('comments');
-
-    var isFocused = false;
-    const textarea = $('#comments textarea');
-    window.isFocused = isFocused;
-    textarea.on('focus', () => {
-        console.log('is focused')
-        window.isFocused = true;
-    });
-    textarea.on('blur', () => {
-        console.log('is blured')
-        window.isFocused = false;
-    });
-    
 });
