@@ -38,6 +38,8 @@ $(function () {
         console.log('is blured')
         isFocused = false;
     });
+    
+    isFocused = true;
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
