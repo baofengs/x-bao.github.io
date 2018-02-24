@@ -27,8 +27,8 @@ $(function () {
 	var $body = $('html');
 
     var isFocused = false;
-    
-    (function () {
+
+    setTimeout(() => {
         const textarea = $('#comments textarea');
         window.isFocused = isFocused;
         textarea.focus(() => {
@@ -39,7 +39,7 @@ $(function () {
             console.log('is blured')
             isFocused = false;
         });
-    })();
+    });
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
