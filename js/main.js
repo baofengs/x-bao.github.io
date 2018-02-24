@@ -27,7 +27,7 @@ $(function () {
 	var $body = $('html');
 
     var isFocused = false;
-    const textarea = $('#comments textarea');
+    
     
     // const textarea = $('#comments textarea');
     // window.isFocused = isFocused;
@@ -48,9 +48,10 @@ $(function () {
 			var postNavLeft = postNav.querySelector('.prev');
 			var postnavRight = postNav.querySelector('.next');
         }
-        
+
+        const textarea = $('#comments textarea');
         textarea.focus(() => {
-            console.log('is focused', document.hasFocus());
+            console.log('is focused', documnet.hasFocus());
             isFocused = true;
         });
         textarea.blur(() => {
