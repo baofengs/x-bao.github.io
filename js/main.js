@@ -28,17 +28,18 @@ $(function () {
 
     var isFocused = false;
     
-    
-    // const textarea = $('#comments textarea');
-    // window.isFocused = isFocused;
-    // textarea.focus(() => {
-    //     console.log('is focused')
-    //     isFocused = true;
-    // });
-    // textarea.blur(() => {
-    //     console.log('is blured')
-    //     isFocused = false;
-    // });
+    (function () {
+        const textarea = $('#comments textarea');
+        window.isFocused = isFocused;
+        textarea.focus(() => {
+            console.log('is focused')
+            isFocused = true;
+        });
+        textarea.blur(() => {
+            console.log('is blured')
+            isFocused = false;
+        });
+    })();
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
@@ -49,7 +50,7 @@ $(function () {
 			var postnavRight = postNav.querySelector('.next');
         }
 
-        isFocused = document.hasFocus();
+        // isFocused = document.hasFocus();
 
         // const textarea = $('#comments textarea');
         // textarea.focus(() => {
