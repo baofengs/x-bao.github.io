@@ -28,6 +28,18 @@ $(function () {
 
     var isFocused = false;
 
+    (function() {
+        const textarea = $('#comments textarea');
+        textarea.focus(() => {
+            console.log('is focused');
+            isFocused = true;
+        });
+        textarea.blur(() => {
+            console.log('is blured');
+            isFocused = false;
+        });
+    })();
+
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
 		// console.log(e.which, 'key down');
