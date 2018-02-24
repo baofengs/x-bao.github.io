@@ -7,7 +7,6 @@ tags:
 date: 2018-02-24 18:45:44
 ---
 
-
 原文：[Truth, Equality and JavaScript](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/)
 
 作为 JavaScript 新手，对下列两种情况可能感到惊恐
