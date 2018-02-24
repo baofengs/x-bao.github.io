@@ -26,7 +26,7 @@ $(function () {
 	// i  go index
 	var $body = $('html');
 
-    var isFocused = window.isFocused;
+    var isFocused = false;
     
     const textarea = $('#comments textarea');
     window.isFocused = isFocused;
@@ -38,8 +38,6 @@ $(function () {
         console.log('is blured')
         isFocused = false;
     });
-    
-    isFocused = true;
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
@@ -48,7 +46,18 @@ $(function () {
 		if (postNav) {
 			var postNavLeft = postNav.querySelector('.prev');
 			var postnavRight = postNav.querySelector('.next');
-		}
+        }
+        
+        const textarea = $('#comments textarea');
+        window.isFocused = isFocused;
+        textarea.focus(() => {
+            console.log('is focused');
+            isFocused = true;
+        });
+        textarea.blur(() => {
+            console.log('is blured');
+            isFocused = false;
+        });
 
 		switch (e.which) {
 			case 74: // j down
