@@ -51,7 +51,7 @@ $(function () {
 
         const textarea = $('#comments textarea');
         textarea.focus(() => {
-            console.log('is focused', documnet.hasFocus());
+            console.log('is focused', document.hasFocus());
             isFocused = true;
         });
         textarea.blur(() => {
