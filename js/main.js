@@ -40,19 +40,6 @@ $(function () {
 
         isFocused = document.activeElement.tagName == 'TEXTAREA';
 
-        // if (bindOnce) {
-        //     const textarea = $('#comments textarea');
-        //     textarea.focus(() => {
-        //         // console.log('is focused...',);
-        //         isFocused = true;
-        //     });
-        //     textarea.blur(() => {
-        //         // console.log('is blured...');
-        //         isFocused = false;
-        //     });
-        //     bindOnce = 0;
-        // }
-
 		switch (e.which) {
 			case 74: // j down
 				if (!isFocused && !isKeydown) {
