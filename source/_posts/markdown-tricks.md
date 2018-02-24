@@ -13,17 +13,17 @@ Markdown 所提供的功能完全可以 cover 平时笔记、邮件等扣字的�
 ## 给表格加一个空行
 
 ```html
-| key | value |
-|-----|-------|
-| foo | bar   |
-|                   ⃪ 空行
-| baz | opps~ |
+| key    | value |
+| ------ | ----- |
+| foo    | bar   |
+|                    ⃪ 空行
+| baz    | opps~ |
 ```
 
 | key | value |
-|-----|-------|
-| foo | bar |
-|
+| --- | ----- |
+| foo | bar   |
+|     |       |
 | baz | opps~ |
 
 ## 折叠一部分内容
@@ -43,11 +43,11 @@ Markdown 所提供的功能完全可以 cover 平时笔记、邮件等扣字的�
 ```
 
 <details>
-	<summary>click me</summary>
-	因为我刚好遇见你
-	留下足迹才美丽
-	分吹花落泪如雨
-	因为不想分离
+    <summary>click me</summary>
+    因为我刚好遇见你
+    留下足迹才美丽
+    分吹花落泪如雨
+    因为不想分离
 </details>
 
 ## 写个 todo
@@ -69,7 +69,7 @@ Markdown 所提供的功能完全可以 cover 平时笔记、邮件等扣字的�
 - 插入到`<iframe>`中 URL 链接，如果含有 *query string*类型参数，则必须将 *&* 转化为 ***`&amp;`***
 - `<iframe> </iframe>`两个 *tag* 之间须留有空格，不要问为什么，都是这么说的，我也是这么做的
 - `<iframe>`的结束标签一定要加上
-	如果最后两点有问题，都会导致 `<iframe>` 标签之后的内容无法显示
+    如果最后两点有问题，都会导致 `<iframe>` 标签之后的内容无法显示
 
 ```html
 <iframe src="https://x-bao.github.io/awesome-css/colorfule%20black/index.html"  frameborder="1" scrolling="no"> </iframe>
