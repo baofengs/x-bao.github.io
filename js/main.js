@@ -49,15 +49,17 @@ $(function () {
 			var postnavRight = postNav.querySelector('.next');
         }
 
-        const textarea = $('#comments textarea');
-        textarea.focus(() => {
-            console.log('is focused', document.hasFocus());
-            isFocused = true;
-        });
-        textarea.blur(() => {
-            console.log('is blured');
-            isFocused = false;
-        });
+        isFocused = document.hasFocus();
+
+        // const textarea = $('#comments textarea');
+        // textarea.focus(() => {
+        //     console.log('is focused', document.hasFocus());
+        //     isFocused = true;
+        // });
+        // textarea.blur(() => {
+        //     console.log('is blured');
+        //     isFocused = false;
+        // });
 
 		switch (e.which) {
 			case 74: // j down
