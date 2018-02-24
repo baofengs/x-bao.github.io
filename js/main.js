@@ -27,18 +27,7 @@ $(function () {
 	var $body = $('html');
 
     var isFocused = false;
-
-    (function() {
-        const textarea = $('#comments textarea');
-        textarea.focus(() => {
-            console.log('is focused');
-            isFocused = true;
-        });
-        textarea.blur(() => {
-            console.log('is blured');
-            isFocused = false;
-        });
-    })();
+    let bindOnce = 1;
 
 	var isKeydown = false;
 	$body.on('keydown', function (e) {
@@ -49,15 +38,18 @@ $(function () {
 			var postnavRight = postNav.querySelector('.next');
         }
 
-        const textarea = $('#comments textarea');
-        textarea.focus(() => {
-            // console.log('is focused', document.hasFocus());
-            isFocused = true;
-        });
-        textarea.blur(() => {
-            // console.log('is blured');
-            isFocused = false;
-        });
+        if (bindOnce) {
+            const textarea = $('#comments textarea');
+            textarea.focus(() => {
+                console.log('is focused...',);
+                isFocused = true;
+            });
+            textarea.blur(() => {
+                console.log('is blured...');
+                isFocused = false;
+            });
+            bindOnce = 0;
+        }
 
 		switch (e.which) {
 			case 74: // j down
