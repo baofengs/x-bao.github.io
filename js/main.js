@@ -41,11 +41,11 @@ $(function () {
         if (bindOnce) {
             const textarea = $('#comments textarea');
             textarea.focus(() => {
-                console.log('is focused...',);
+                // console.log('is focused...',);
                 isFocused = true;
             });
             textarea.blur(() => {
-                console.log('is blured...');
+                // console.log('is blured...');
                 isFocused = false;
             });
             bindOnce = 0;
