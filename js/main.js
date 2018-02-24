@@ -48,16 +48,16 @@ $(function () {
 			var postnavRight = postNav.querySelector('.next');
         }
         
-        const textarea = $('#comments textarea');
-        window.isFocused = isFocused;
-        textarea.focus(() => {
-            console.log('is focused');
-            isFocused = true;
-        });
-        textarea.blur(() => {
-            console.log('is blured');
-            isFocused = false;
-        });
+        // const textarea = $('#comments textarea');
+        // window.isFocused = isFocused;
+        // textarea.focus(() => {
+        //     console.log('is focused');
+        //     isFocused = true;
+        // });
+        // textarea.blur(() => {
+        //     console.log('is blured');
+        //     isFocused = false;
+        // });
 
 		switch (e.which) {
 			case 74: // j down
@@ -188,4 +188,14 @@ $(function () {
 		$('body').css({ opacity: 1}).removeClass('queue-in');
 	}, 500);
 
+});
+
+const textarea = $('#comments textarea');
+textarea.focus(() => {
+    console.log('is focused')
+    isFocused = true;
+});
+textarea.blur(() => {
+    console.log('is blured')
+    isFocused = false;
 });
