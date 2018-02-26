@@ -871,6 +871,7 @@ summary:hover {
   background: transparent;
   font-size: 1.5rem;
   line-height: 50px;
+  height: 55px;
 }
 .index-nav__list .hidden {
   visibility: hidden;
@@ -898,7 +899,7 @@ summary:hover {
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.075);
 }
 .index-nav__list:hover .Diary {
-  top: -94px;
+  top: -93px;
   transform: perspective(125px) rotateX(25deg);
 }
 .index-nav__list:hover .Slaughter {
@@ -910,11 +911,11 @@ summary:hover {
   transform: perspective(125px) rotateX(25deg);
 }
 .index-nav__list:hover .Github {
-  top: 50.1px;
+  top: 50px;
   transform: perspective(125px) rotateX(-25deg);
 }
 .index-nav__list:hover .About {
-  top: 93.5px;
+  top: 93px;
   transform: perspective(125px) rotateX(25deg);
 }
 #back-to-top {

@@ -3,7 +3,7 @@ $(function () {
     particlesJS("particles-oli-wrapper", {
         "particles": {
             "number": {
-                "value": 40,
+                "value": 64,
                 "density": {
                     "enable": true,
                     "value_area": 800
@@ -77,8 +77,8 @@ $(function () {
                     "mode": "grab"
                 },
                 "onclick": {
-                    "enable": true,
-                    "mode": "push"
+                    "enable": false,
+                    "mode": "repulse"
                 },
                 "resize": true
             },
