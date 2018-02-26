@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1.0"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><link rel="alternate" href="https://sanbaofengs.com" hreflang="zh-Hans"><meta name="google-site-verification" content="yVLudwcqIQlJbqhCeKLJZ8W_I1OJeVE8p30fz1mRhLM"><meta name="author" content="San Baofeng"><meta name="description" content="If I Rest, I Rust"><link rel="alternative" href="/atom.xml" title="San Baofeng's" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><title>字体那点事儿 - San Baofeng's</title><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css"><link rel="stylesheet" href="/js/gitment/gitment-default.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><script src="/js/jquery-3.1.1.min.js"></script><script src="/js/fancybox/jquery.fancybox.min.js"></script><script src="/js/gitment/gitment.browser.js"></script></head><body style="opacity:0;"><header class="head"><h1 class="head-title u-fl"><a href="/">San Baofeng's</a></h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a class="head-nav__link" href="/archives">カタログ/（目录）</a></li></ul></nav></header><nav class="post-nav"><a class="nav-item prev" href="/2018/02/24/trans-truth-equality-and-javascript/"><i class="icon-arrow-left"></i><span class="nav-item-title nav-item-title-left">【译】Truth, Equality and JavaScript</span></a></nav><main class="main"><article class="post"><header class="post__head"> <time class="post__time" datetime="2018-02-26T20:45:08.000Z">02-27, 2018</time><h1 class="post__title"><a href="/2018/02/27/font/">字体那点事儿</a></h1><div class="post__main echo"><p>这篇单独聊聊字体那点事儿，本打算放到<a href="">字体图标那些事儿</a>里边，但是可能会导致篇幅太长了，故而拎出来，单独聊聊。</p>
+<h2 id="Web-字体工作原理"><a href="#Web-字体工作原理" class="headerlink" title="Web 字体工作原理"></a>Web 字体工作原理</h2><ol>
+<li>浏览器加载页面，对 HTMl 进行解析渲染</li>
+<li>将字体转化为对应的 unicode 编码</li>
+<li>如果没有设置 font-family，使用默认字体</li>
+<li>设置了 font-family，根据设置的 font-family 查找对应的字体文件，如果有自定义字体 font-face，则先进行 5</li>
+<li>加载 font-face 指定的字体文件</li>
+<li>根据步骤2中的 unicode 码，在字体文件中找到对应的字体外形，然后绘制在页面上</li>
+</ol>
+<h2 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h2><h3 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h3><p>每个 font-family 都包含一组具有共同特征的字体。看看五大字体类型：</p>
+<table>
+<thead>
+<tr>
+<th>字体系列</th>
+<th>特征</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serif</td>
+<td>衬线字体：字母末端含有装饰性的「小细线」，新闻报纸文字排版</td>
+<td>Times、Times New Roman、Georgia</td>
+</tr>
+<tr>
+<td>Sans-serif</td>
+<td>非衬线字体：不含有衬线，通常用于计算机屏幕字体</td>
+<td>Verdana、Arial</td>
+</tr>
+<tr>
+<td>Monospace</td>
+<td>等宽字体：每个字母在水平方向所占的宽度一致，通常用于代码展示</td>
+<td>Courier、Andale Mono</td>
+</tr>
+<tr>
+<td>Cursive</td>
+<td>手写体：类似手写效果，标题中常见</td>
+<td>Comic Sans、Apple Chancery</td>
+</tr>
+<tr>
+<td>Fantasy</td>
+<td>具有某种风格的装饰性字体</td>
+<td>Last Ninja、Impact</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://sanbaofengs.com/slaughter/css/font/index.html">效果预览</a>：</p>
+<iframe src="https://sanbaofengs.com/slaughter/css/font/index.html" frameborder="1" scrolling="yes">字体示例</iframe>
+
+<h3 id="CSS-中指定-font-family"><a href="#CSS-中指定-font-family" class="headerlink" title="CSS 中指定 font-family"></a>CSS 中指定 font-family</h3><p>本质：指定一个首选字体列表。CSS 会根据这个列表设置的字体顺序选择第一个可用的字体。越靠前，优先级就越高。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">font-family</span>: <span class="string">'Comic Sans'</span>, <span class="string">'Verdana'</span>, <span class="string">'Times'</span>, <span class="string">'Serif'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="不存在的字体"><a href="#不存在的字体" class="headerlink" title="不存在的字体"></a>不存在的字体</h3><p>在设置<code>font-family</code>时，一般都会在末尾添加 <code>Serif</code> 或者 <code>Sans Serif</code>，真的存在这种字体名称的字体么？</p>
+<p>不存在的。使用 <code>Serif</code> 和 <code>Sans Serif</code>，实际上表示，使用系统默认的该字体系列的字体，不同的操作系统或平台可能存在差异。</p>
+<h3 id="font-family-最佳实践"><a href="#font-family-最佳实践" class="headerlink" title="font-family 最佳实践"></a>font-family 最佳实践</h3><p>font-family 的本质是一个字体的优先级列表，比较靠谱的策略如下：</p>
+<ul>
+<li>将最希望使用的字体放在靠前的位置</li>
+<li>由于用户可能没有安装相应的字体，需要指定同字体系列的字体，最为备选方案</li>
+<li>提供一个任何平台上都可能有的字体</li>
+<li>最后提供一个字体系列，当以上都不满足时，由系统指定默认的字体</li>
+</ul>
+<h2 id="font-face"><a href="#font-face" class="headerlink" title="font-face"></a>font-face</h2><h3 id="字体格式"><a href="#字体格式" class="headerlink" title="字体格式"></a>字体格式</h3><table>
+<thead>
+<tr>
+<th>字体</th>
+<th>文件后缀</th>
+<th>详情</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TrueType 字体</td>
+<td>.ttf</td>
+<td>TrueType 和 OpenType 字体紧密相关，OpenType 建立在 TrueType 基础之上，比 TrueType 更新</td>
+</tr>
+<tr>
+<td>OpenType 字体</td>
+<td>.otf</td>
+<td>见上</td>
+</tr>
+<tr>
+<td>Emmbedded OpenType</td>
+<td>.eot</td>
+<td>Embedded OpenType(EOT)是 OpenType 的一种压缩形式。这种格式是 Microsoft 专用的，仅 IE 提供支持</td>
+</tr>
+<tr>
+<td>SVG 字体</td>
+<td>.svg</td>
+<td>通用图像格式，SVG 使用这种格式标志字符</td>
+</tr>
+<tr>
+<td>Web 开放字体格式</td>
+<td>.woff</td>
+<td>Web 开放字体格式建立在 TrueType 之上，已经发展为 web 字体的一个标准，大多数现代浏览器对这种格式提供了很好的支持</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS-中-font-face-干了啥"><a href="#CSS-中-font-face-干了啥" class="headerlink" title="CSS 中 @font-face 干了啥"></a>CSS 中 @font-face 干了啥</h3><ol>
+<li>指定自定义字体的名称，通过 font-family 设置</li>
+<li>告诉浏览器：加载由 src 指定的字体文件。浏览器会尝试加载每一个 src 文件，直到找到一个它能支持的文件</li>
+<li>一旦加载，就能使用 font-family 指定的名称的字体了</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>: <span class="string">"icons"</span>;</div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">"../font/icons.eot"</span>);</div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">"../font/icons.eot?#iefix"</span>) <span class="built_in">format</span>(<span class="string">"embedded-opentype"</span>),</div><div class="line">       <span class="built_in">url</span>(<span class="string">"../font/icons.woff2"</span>) <span class="built_in">format</span>(<span class="string">"woff2"</span>),</div><div class="line">       <span class="built_in">url</span>(<span class="string">"../font/icons.woff"</span>) <span class="built_in">format</span>(<span class="string">"woff"</span>),</div><div class="line">       <span class="built_in">url</span>(<span class="string">"../font/icons.ttf"</span>) <span class="built_in">format</span>(<span class="string">"truetype"</span>),</div><div class="line">       <span class="built_in">url</span>(<span class="string">"../font/icons.svg#icons"</span>) <span class="built_in">format</span>(<span class="string">"svg"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="font-face-引发的性能危机"><a href="#font-face-引发的性能危机" class="headerlink" title="font-face 引发的性能危机"></a>font-face 引发的性能危机</h3><p>后期补充</p>
+<h2 id="字体高度"><a href="#字体高度" class="headerlink" title="字体高度"></a>字体高度</h2><p>设置一个字体高度为 <code>font-size: 14px</code>，说明这个字母的最低部分与最高部分之间有 14像素，示意图见下：</p>
+<p><img src="https://i.loli.net/2018/02/27/5a9471203539b.png" alt="字体高度示例"></p>
+<h2 id="写在最后："><a href="#写在最后：" class="headerlink" title="写在最后："></a>写在最后：</h2><p>免费字体下载：<a href="http://www.911fonts.com/" target="_blank" rel="external">911fonts</a><br>字体服务：<a href="https://fonts.google.com" target="_blank" rel="external">google fonts</a></p>
+</div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/废话篇/">废话篇</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/字体/">字体</a></li></ul></footer></article><div id="comments"></div></main><div id="back-to-top"><i class="icon-arrow-right"></i></div><footer class="foot"><div class="foot-copy"><p class="fooot">&copy; 2017-2018 <a class="link" href="https://github.com/x-bao" target="view_window">San Baofeng</a><a href="http://www.miibeian.gov.cn/" target="view_window" style="color: #fff;">（鄂ICP备17002258号-2）</a></p><p class="foot-theme">Powered by <a href="https://hexo.io" target="_blank" class="link">Hexo</a> with Theme <a href="https://github.com/x-bao/hexo-theme-ochuunn" target="_blank" class="link">ochuunn</a></p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-80885450-5');
+ga('send','pageview');</script><!-- 文章详情页才展示评论--><script src="/js/comment.js"></script><script src="/js/autoScroll.js"></script><script src="/js/scroller.js"></script><script src="/js/main.js"></script></body></html>
