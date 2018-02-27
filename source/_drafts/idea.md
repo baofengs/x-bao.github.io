@@ -38,3 +38,8 @@ tags: [idea]
     - materia design
     - 类似的 App，有个 chrome 插件好像
 - 具体的需求以及交互有待完善
+
+其他
+
+- 添加百度统计
+- 向百度提交站点地图
