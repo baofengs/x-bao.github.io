@@ -119,7 +119,41 @@ Ps: VS Code 配置文件跟 sublime 相比有一个特点，鼠标 *hover* 到�
 
 就这么多吧，其他的移步 google
 
-### 最后
+---
+
+## 让 Emmet 飞
+
+自从用上了 VS Code，然后就越来越回不到 Sublime 了😤
+
+### Emmet *tab* 补全不总是能够生效
+
+```bash
+"emmet.triggerExpansionOnTab": true,
+```
+
+### 其他语言文件中开启 Emmet 缩写功能
+
+有些语言默认状态下是不支持 Emmet 的，所有需要添加一个映射
+
+```bash
+"emmet.includeLanguages": {
+    "vue-html": "html",
+    "vue": "html"
+}
+```
+
+### 其他
+
+```bash
+// 尽可能显示 Emmet 缩写建议
+"emmet.showAbbreviationSuggestions": true,
+// 在建议中显示展开的 Emmet 缩写。
+// 选择 "inMarkupAndStylesheetFilesOnly" 选项将仅应用于 html、haml、jade、slim、xml、xsl、css、scss、sass、less 和 stylus 文件。
+// 选择 "always" 选项将应用于所有适用文件不限于标记或 CSS 的所有部分。
+"emmet.showExpandedAbbreviation": "always",
+```
+
+### 写在最后
 
 show 下我的 VS Code
 
