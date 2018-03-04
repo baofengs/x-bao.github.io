@@ -52,3 +52,9 @@ git revert HEAD~
 撤销上一次提交，并添加一个提交，记录这次撤销动作
 
 不影响之前的 commit
+
+## 最后
+
+想要安全驾驶 Git 飞行，这个少不了
+
+[git 飞行手册](https://github.com/k88hudson/git-flight-rules)
