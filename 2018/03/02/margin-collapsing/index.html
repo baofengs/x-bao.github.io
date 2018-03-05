@@ -21,6 +21,20 @@
 </ul>
 </li>
 </ul>
+<h2 id="关于-BFC"><a href="#关于-BFC" class="headerlink" title="关于 BFC"></a>关于 BFC</h2><p>BFC：块级格式化上下文<br>本质：页面上一个隔离的独立容器，描述了其子元素应该如何定位，以及和其他元素之间的关系和相互作用。容器内的子元素不会受到外界的影响，反之亦然。</p>
+<h3 id="如何生成-BFC"><a href="#如何生成-BFC" class="headerlink" title="如何生成 BFC"></a>如何生成 BFC</h3><ul>
+<li>HTML 本身就是一个BFC</li>
+<li>float: left/right</li>
+<li>position：absolute/fixed</li>
+<li>display: table-cell/table-caption/inline-block/flex/inline-flex</li>
+<li>overflow: scroll/hidden/auto</li>
+</ul>
+<h3 id="BFC-特性"><a href="#BFC-特性" class="headerlink" title="BFC 特性"></a>BFC 特性</h3><ul>
+<li>阻止外边距合并（Block formatting contexts prevent margin collapsing）</li>
+<li>包裹浮动元素（Block formatting contexts contain floats）</li>
+<li>不与浮动元素重叠 （Block formatting contexts do not overlap floats）</li>
+</ul>
+<p><a href="http://maxdesign.com.au/jobs/sample-block-formatting-context/index.htm" target="_blank" rel="external">CSS: The block formatting context</a></p>
 </div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/废话篇/">废话篇</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/CSS/">CSS</a></li></ul></footer></article><div id="comments"></div></main><div id="back-to-top"><i class="icon-arrow-right"></i></div><footer class="foot"><div class="foot-copy"><p class="fooot">&copy; 2017-2018 <a class="link" href="https://github.com/x-bao" target="view_window">San Baofeng</a><a href="http://www.miibeian.gov.cn/" target="view_window" style="color: #fff;">（鄂ICP备17002258号-2）</a></p><p class="foot-theme">Powered by <a href="https://hexo.io" target="_blank" class="link">Hexo</a> with Theme <a href="https://github.com/x-bao/hexo-theme-ochuunn" target="_blank" class="link">ochuunn</a></p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 ga('create','UA-80885450-5');
 ga('send','pageview');</script><!-- 文章详情页才展示评论--><script src="/js/comment.js"></script><script src="/js/autoScroll.js"></script><script src="/js/scroller.js"></script><script src="/js/main.js"></script></body></html>
