@@ -34,6 +34,8 @@ BFC：块级格式化上下文
 - position：absolute/fixed
 - display: table-cell/table-caption/inline-block/flex/inline-flex
 - overflow: scroll/hidden/auto
+- display: flow-root
+	- 触发 BFC，没有任何副作用
 
 ### BFC 特性
 
