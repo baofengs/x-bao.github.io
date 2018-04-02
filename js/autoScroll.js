@@ -1,4 +1,1 @@
-$(function () {
-    console.log('ssss')
-    window.scrollTo(0, 160);
-});
+$(function(){console.log("ssss"),window.scrollTo(0,160)});
