@@ -21,5 +21,6 @@
     "hexo-server": "^0.2.0",
     "hexo-uglify": "^0.0.5",
     "hexo-wordcount": "^2.0.1"
-  }
+  },
+  "devDependencies": {}
 }
