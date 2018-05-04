@@ -1,7 +1,13 @@
 ---
 title: 块/行级元素的宽高
-tags: ['废话篇', 'HTML', 'width', 'height']
+tags:
+  - 废话篇
+  - HTML
+  - width
+  - height
+date: 2018-05-04 13:27:58
 ---
+
 
 
 ## Normal Flow
