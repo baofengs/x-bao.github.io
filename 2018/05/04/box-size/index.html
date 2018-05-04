@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1.0"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><link rel="alternate" href="https://sanbaofengs.com" hreflang="zh-Hans"><meta name="google-site-verification" content="yVLudwcqIQlJbqhCeKLJZ8W_I1OJeVE8p30fz1mRhLM"><meta name="baidu-site-verification" content="lGmVtKnPAU"><meta name="author" content="San Baofeng"><meta name="description" content="If I Rest, I Rust"><link rel="alternative" href="/atom.xml" title="San Baofeng's" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><script>var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?" + 'f00d6c21ad53bcc5d93c0a390afc84a7';
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();</script><title>块/行级元素的宽高 - San Baofeng's</title><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css"><link rel="stylesheet" href="/js/gitment/gitment-default.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><script src="/js/jquery-3.1.1.min.js"></script><script src="/js/fancybox/jquery.fancybox.min.js"></script><script src="/js/gitment/gitment.browser.js"></script></head><body style="opacity:0"><header class="head"><h1 class="head-title u-fl"><a href="/">San Baofeng's</a></h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a class="head-nav__link" href="/archives">カタログ/（目录）</a></li></ul></nav></header><nav class="post-nav"><a class="nav-item next" href="/2018/05/03/dont-starve-together-dedicated-server-discussion/"><i class="icon-arrow-right"></i><span class="nav-item-title nav-item-title-right">Don't Starve Together Dedicated Server</span></a></nav><main class="main"><article class="post"><header class="post__head"> <time class="post__time" datetime="2018-05-04T05:27:58.000Z">05-04, 2018</time><h1 class="post__title"><a href="/2018/05/04/box-size/">块/行级元素的宽高</a></h1><div class="post__main echo"><h2 id="Normal-Flow"><a href="#Normal-Flow" class="headerlink" title="Normal Flow"></a>Normal Flow</h2><ul>
+<li>块级元素<ul>
+<li>垂直方向，从上到下依次排列</li>
+<li>默认宽度占满一整行</li>
+<li>兄弟盒之间的距离由<code>margn</code>决定，同一格式化上下文中<code>margin</code>会合并</li>
+</ul>
+</li>
+<li>行内元素<ul>
+<li>水平方向，从左到右依次排列</li>
+<li>一行铺满之后自动换行</li>
+<li>水平<code>padding</code>、<code>margin</code>、<code>border</code>都有效</li>
+<li>垂直<code>padding</code>、<code>margin</code>、<code>border</code>都无效，对元素的高度无影响</li>
+</ul>
+</li>
+</ul>
+<h2 id="lt-div-gt-的高度"><a href="#lt-div-gt-的高度" class="headerlink" title="&lt;div&gt;的高度"></a><code>&lt;div&gt;</code>的高度</h2><h3 id="1-只有文本"><a href="#1-只有文本" class="headerlink" title="1. 只有文本"></a>1. 只有文本</h3><ul>
+<li><strong>单行</strong><ul>
+<li><code>&lt;div&gt;</code>高度 = 字体大小 * 字体设置的默认行高</li>
+</ul>
+</li>
+<li><strong>多行</strong><ul>
+<li><code>&lt;div&gt;</code>高度 = (字体大小 <em> 字体默认设置的默认行高) </em> 行数</li>
+</ul>
+</li>
+</ul>
+<h4 id="关于『建议行高』"><a href="#关于『建议行高』" class="headerlink" title="关于『建议行高』"></a>关于『建议行高』</h4><p>字体的默认行高是由设计师设计时写入字体文件中的，通常称为『建议行高』，不同的字体对应的建议行高不一致</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* by default */</span></span><br><span class="line"><span class="selector-tag">line-height</span>: <span class="selector-tag">normal</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="2-lt-div-gt-中包含-lt-div-gt"><a href="#2-lt-div-gt-中包含-lt-div-gt" class="headerlink" title="2. &lt;div&gt;中包含 &lt;div&gt;"></a>2. <code>&lt;div&gt;</code>中包含 <code>&lt;div&gt;</code></h3><p>形如：<code>&lt;div class=&quot;container&quot;&gt;</code>中包含<code>&lt;div class=&quot;item&quot;&gt;</code></p>
+<ul>
+<li><strong><code>margin</code>合并</strong><ul>
+<li><code>&lt;div class=&quot;container&quot;&gt;</code>高度 = (字体大小 <em> 建议行高) </em> 行数 + <code>padding-top</code> + <code>padding-bottom</code></li>
+</ul>
+</li>
+<li><strong><code>margin</code>不合并</strong><ul>
+<li><code>&lt;div class=&quot;container&quot;&gt;</code>高度 = (字体大小 <em> 建议行高) </em> 行数 + <code>padding-top</code> + <code>padding-botom</code> + <code>margin-top</code> + <code>margin-bottom</code></li>
+</ul>
+</li>
+</ul>
+<p>这里的 <code>margin</code> 合并是父子间的合并</p>
+<p>组织合并的方法：</p>
+<ul>
+<li>父元素建一道墙 OR 父子之间添加任何可以隔开的元素<ul>
+<li>父元素添加<code>border-top</code></li>
+<li>父元素添加 <code>padding-top</code></li>
+</ul>
+</li>
+<li>BFC</li>
+</ul>
+<h2 id="lt-div-gt-的宽度"><a href="#lt-div-gt-的宽度" class="headerlink" title="&lt;div&gt;的宽度"></a><code>&lt;div&gt;</code>的宽度</h2><p>默认占满一行</p>
+<h2 id="字体两端对齐方案"><a href="#字体两端对齐方案" class="headerlink" title="字体两端对齐方案"></a>字体两端对齐方案</h2><p>核心：</p>
+<ul>
+<li>text-align: justify;</li>
+<li>label::after</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"#"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"name"</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"phone"</span>&gt;</span>联系方式<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">vertical-align</span>: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">label</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">4em</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: justify;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">label</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://imgs.sanbaofengs.com/18-4-25/44471667.jpg" alt=""></p>
+<h2 id="inline-inline-block-元素的宽高"><a href="#inline-inline-block-元素的宽高" class="headerlink" title="inline/inline-block 元素的宽高"></a>inline/inline-block 元素的宽高</h2><ul>
+<li>高度<ul>
+<li>line-height 决定</li>
+</ul>
+</li>
+<li>宽度<ul>
+<li>内容的宽度</li>
+<li>如果 inline 元素之间又多个空格、tab、回车都会合并成一个空格</li>
+</ul>
+</li>
+</ul>
+<p>小故事</p>
+<p>有些 FE，当他们遇到 inline 元素间的空隙问题，是这样想的：</p>
+<p>「我懂了，我来用 <code>font-size: 0</code> 来解决」</p>
+<p>这样，他就有其他问题了</p>
+<h4 id="缝隙问题最佳实践"><a href="#缝隙问题最佳实践" class="headerlink" title="缝隙问题最佳实践"></a>缝隙问题最佳实践</h4><p>使用 <code>float</code> + <code>.clearfix</code> 解决</p>
+<h2 id="居中问题"><a href="#居中问题" class="headerlink" title="居中问题"></a>居中问题</h2><p>对于块级元素单行文本居中，不到万不得已不要写高度</p>
+<p>必要时使用 <code>padding</code> 凑设计稿上给定的高度</p>
+<h2 id="文本溢出省略"><a href="#文本溢出省略" class="headerlink" title="文本溢出省略"></a>文本溢出省略</h2><h3 id="单行"><a href="#单行" class="headerlink" title="单行"></a>单行</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.overflow</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">5em</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="多行"><a href="#多行" class="headerlink" title="多行"></a>多行</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.line-clapm</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> dashed;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">5em</span>;</span><br><span class="line">    <span class="attribute">white-space</span>: brack-all;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="comment">/* 核心 */</span></span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">3</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/HTML/">HTML</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/废话篇/">废话篇</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/width/">width</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/height/">height</a></li></ul></footer></article><div id="comments"></div></main><div id="back-to-top"><i class="icon-arrow-right"></i></div><footer class="foot"><div class="foot-copy"><p class="fooot">&copy; 2017-2018 <a class="link" href="https://github.com/x-bao" target="view_window">San Baofeng</a><a href="http://www.miibeian.gov.cn/" target="view_window" style="color: #fff">（鄂ICP备17002258号-2）</a></p><p class="foot-theme">Powered by <a href="https://hexo.io" target="_blank" class="link">Hexo</a> with Theme <a href="https://github.com/x-bao/hexo-theme-ochuunn" target="_blank" class="link">ochuunn</a></p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-80885450-5');
+ga('send','pageview');</script><!-- 文章详情页才展示评论--><script src="/js/comment.js"></script><script src="/js/autoScroll.js"></script><script src="/js/scroller.js"></script><script src="/js/main.js"></script></body></html>
