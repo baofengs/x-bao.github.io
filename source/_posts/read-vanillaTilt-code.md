@@ -262,6 +262,8 @@ update() {
 JSON.parse('true')  // true (boolean)
 ```
 
+完整注释版 [vanilla-tilt.js](https://sanbaofengs.com/slaughter/js/vanillaTilt/vanilla-tilt.js)
+
 ## 写在最后
 
 27 行核心代码写一个简版的
