@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sanbaofengs.com/2018/05/16/toString-toLocalString/</loc>
+    
+    <lastmod>2018-05-16T15:25:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sanbaofengs.com/2018/05/15/javascript-garbage-collection/</loc>
     
-    <lastmod>2018-05-15T06:39:53.000Z</lastmod>
+    <lastmod>2018-05-16T09:57:14.000Z</lastmod>
     
   </url>
   
