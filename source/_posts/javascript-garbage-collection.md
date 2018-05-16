@@ -1,7 +1,7 @@
 ---
 title: javascript-garbage-collection
 date: 2018-05-15 13:52:20
-tags: ['JavaScript', 'Garbage Collect']
+tags: ['JavaScript', 'Garbage Collect', 'Note']
 ---
 
 这篇聊聊 JavaScript 的垃圾收集。
