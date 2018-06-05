@@ -6,8 +6,6 @@ tags: ['Web', '概念', '名词解释']
 
 好记性不如烂笔头啊~~~
 
-目前可能不知道具体的分类，把见到的不熟悉的一些 web 开发相关的概念，统统在这里记录一下。在写的过程中，可能会有 web 开发相关以外的一些概念，也会同样记录在这里。差不多了再进行具体的分类吧~
-
 * FormData 对象
 
 概念：使用 JS 将数据编译成键值对，以便用 XMLHttpRequest 发送数据
@@ -16,9 +14,7 @@ tags: ['Web', '概念', '名词解释']
     1. 用于表单数据提交
     2. 发送带键数据，而独立与表单使用
 
-参考链接：
-
-[FormData 对象的使用 - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+参考链接：[FormData 对象的使用 - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
 
 
 * Blob 数据类型
@@ -27,6 +23,6 @@ tags: ['Web', '概念', '名词解释']
 
 使用场景：二进制数据通常用于保存电子表格。程序装入模块和数字化声音模式
 
-参考链接：
+参考链接：[BLOB 数据类型 - IBM](https://www.ibm.com/support/knowledgecenter/zh/SSGU8G_12.1.0/com.ibm.sqlr.doc/ids_sqr_098.htm)
 
-[BLOB 数据类型 - IBM](https://www.ibm.com/support/knowledgecenter/zh/SSGU8G_12.1.0/com.ibm.sqlr.doc/ids_sqr_098.htm)
+PS：目前可能不知道具体的分类，把见到的不熟悉的一些 web 开发相关的概念，统统在这里记录一下。在写的过程中，可能会有 web 开发相关以外的一些概念，也会同样记录在这里。差不多了再进行具体的分类吧~
