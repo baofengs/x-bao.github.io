@@ -1,1 +1,1 @@
-var indexNavItems=$(".index-nav__list span"),links=$(".index-nav__list a"),index=5,timer=setInterval(function(){var n=$(indexNavItems[index%5]);n.css("zIndex",index++)},1e3);
+function open(){indexNav.addClass("open")}function close(){setTimeout(function(){indexNav.removeClass("open")},720)}var indexNavItems=$(".index-nav__list span"),links=$(".index-nav__list a"),indexNav=$(".index-nav__list");window.onload=function(){indexNav.animate({},0,open).animate({},200,close)};var index=5,timer=setInterval(function(){var n=$(indexNavItems[index%5]);n.css("zIndex",index++)},1e3);
