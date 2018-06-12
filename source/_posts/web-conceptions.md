@@ -6,7 +6,7 @@ tags: ['Web', '概念', '名词解释']
 
 好记性不如烂笔头啊~~~
 
-* FormData 对象
+## FormData 对象
 
 概念：使用 JS 将数据编译成键值对，以便用 XMLHttpRequest 发送数据
 
@@ -17,7 +17,7 @@ tags: ['Web', '概念', '名词解释']
 参考链接：[FormData 对象的使用 - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
 
 
-* Blob 数据类型
+## Blob 数据类型
 
 概念：以随机存取块（称为智能大对象空间）的形式存储任何种类的二进制数据。数据库不会对 BLOB 列的内容进行解释。
 
