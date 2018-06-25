@@ -221,7 +221,7 @@ html.index {
 }
 body {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
   padding: 30px 0 20px;
@@ -316,7 +316,7 @@ video {
 }
 .echo {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 .echo a {
@@ -339,26 +339,26 @@ video {
 }
 .echo h1 {
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 2.142857142857143rem;
 }
 .echo h2 {
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.714285714285714rem;
 }
 .echo h3 {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1.285714285714286rem;
 }
 .echo h4,
 .echo h5,
 .echo h6 {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .echo p {
   margin: 1em 0;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.142857142857143rem;
   text-align: justify;
   line-height: 1.8;
 }
@@ -717,7 +717,7 @@ table tr td :last-child {
 }
 .head-title {
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 2.142857142857143rem;
   font-weight: normal;
   color: #fff;
 }
@@ -743,7 +743,7 @@ table tr td :last-child {
   margin: 1.6em;
   text-align: center;
   font-size: 25.6px;
-  font-size: 1.6rem;
+  font-size: 1.828571428571429rem;
   font-weight: normal;
 }
 .comments {
@@ -759,7 +759,7 @@ table tr td :last-child {
   text-align: center;
   color: #fff;
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 0.857142857142857rem;
 }
 .page-menu__item {
   display: inline-block;
@@ -767,22 +767,15 @@ table tr td :last-child {
 .page-menu__link {
   color: #fff;
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 2.142857142857143rem;
 }
 .page-menu__link--disabled {
   color: #f0f0f0;
 }
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: #f5f5f5;
-}
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
-  background-color: #f5f5f5;
+  width: 3px;
 }
 ::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
   background-color: #399c9c;
 }
 .right p {
@@ -1009,14 +1002,14 @@ summary:hover {
 .post__time {
   color: #ccc;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Georgia, serif;
 }
 .post__title {
   margin-top: 5px;
   line-height: 1.5;
   font-size: 32px;
-  font-size: 2rem;
+  font-size: 2.285714285714286rem;
   font-weight: normal;
 }
 .post__title > a {
@@ -1065,15 +1058,15 @@ summary:hover {
 }
 .post__main h1 {
   font-size: 25.6px;
-  font-size: 1.6rem;
+  font-size: 1.828571428571429rem;
 }
 .post__main h2 {
   font-size: 22.4px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .post__main h3 {
   font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 1.371428571428571rem;
 }
 .post__main img {
   margin: 1.6em auto;
@@ -1089,7 +1082,7 @@ summary:hover {
   padding: 10px 15px 10px 0;
   color: #3cb371;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .post__tag__item {
   display: inline-block;
@@ -1245,13 +1238,16 @@ summary:hover {
   }
 }
 @media (max-width: 767px) {
+  #back-to-top {
+    display: none !important;
+  }
   body {
     margin: 10px;
     margin-bottom: 20px;
     margin-top: 0px;
     padding: 0;
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 14px;
+    font-size: 1rem;
   }
   .head,
   .main,
@@ -1275,7 +1271,7 @@ summary:hover {
     margin-bottom: 20px;
   }
   .head {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
   }
   .head-nav {
@@ -1301,7 +1297,7 @@ summary:hover {
   }
   .post__title {
     font-size: 22.4px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .post__foot {
     position: relative;
