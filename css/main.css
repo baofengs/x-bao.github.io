@@ -774,6 +774,7 @@ table tr td :last-child {
 }
 ::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #399c9c;
