@@ -1030,7 +1030,13 @@ summary:hover {
   margin-top: 30px;
 }
 .post__main .headerlink {
-  display: inline-block;
+  display: none;
+  float: right;
+  margin-left: 5px;
+}
+.post__main .headerlink::after {
+  content: '#';
+  float: right;
 }
 .post__main img {
   cursor: pointer;
@@ -1058,9 +1064,17 @@ summary:hover {
 .post__main .highlight pre {
   margin: 0;
 }
-.post__main h1 {
+.post__main h1,
+.post__main h2,
+.post__main h3 {
   font-size: 25.6px;
   font-size: 1.828571428571429rem;
+  display: inline-block;
+}
+.post__main h1:hover .headerlink,
+.post__main h2:hover .headerlink,
+.post__main h3:hover .headerlink {
+  display: inline-block;
 }
 .post__main h2 {
   font-size: 22.4px;
@@ -1240,6 +1254,9 @@ summary:hover {
   }
 }
 @media (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
   #back-to-top {
     display: none !important;
   }
