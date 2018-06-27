@@ -65,3 +65,9 @@ http://www.r9it.com/20180613/ubuntu-18.04-auto-start.html
 形如：function proxy_on () {}
 
 ## 语系错误
+
+https://www.douban.com/note/362250557/
+
+## 用户设置
+
+http://blog.sina.com.cn/s/blog_a954325f0101cpx8.html
