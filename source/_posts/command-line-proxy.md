@@ -40,9 +40,9 @@ forward-socks5 / localhost:1086 .
 sudo privoxy /usr/local/etc/privoxy/config
 ```
 
-#### 检测启动状态
+检测启动状态
 
-查看监听端口
+- 查看监听端口
 
 ```bash
 netstat -an | grep 8118
@@ -51,7 +51,7 @@ netstat -an | grep 8118
 # tcp4     0    0  *.8118             *.*    LISTEN
 ```
 
-查看进程
+- 查看进程
 
 ```bash
 ps -ef | grep privoxy
