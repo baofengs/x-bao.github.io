@@ -996,6 +996,7 @@ summary:hover {
 }
 .post__head {
   margin: 50px;
+  margin-top: 20px;
 }
 .post__head.archive {
   margin: 30px 50px;
@@ -1026,7 +1027,7 @@ summary:hover {
   margin: 50px 0;
 }
 .post__main {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .post__main .headerlink {
   display: inline-block;
@@ -1109,7 +1110,7 @@ summary:hover {
   background-color: #ddd;
 }
 .gallery {
-  margin-bottom: 45px;
+  margin-bottom: 0;
 }
 .gallery a {
   display: inline-block;
