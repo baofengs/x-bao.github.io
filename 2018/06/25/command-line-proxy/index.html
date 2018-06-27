@@ -12,9 +12,14 @@
 <p>说明</p>
 <p><strong><code>loaclhost:1086</code></strong> 是 SS <em>HTTP</em> 代理端口，在 SS 的<strong>配置</strong>里边应该可以找到</p>
 <h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo privoxy /usr/<span class="built_in">local</span>/etc/privoxy/config</span><br></pre></td></tr></table></figure>
-<h4 id="检测启动状态"><a href="#检测启动状态" class="headerlink" title="检测启动状态"></a>检测启动状态</h4><p>查看监听端口</p>
+<p>检测启动状态</p>
+<ul>
+<li>查看监听端口</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 8118</span><br><span class="line"><span class="comment"># 效果如下</span></span><br><span class="line"><span class="comment"># tcp4     0    0  127.0.0.1.8118     *.*    LISTEN</span></span><br><span class="line"><span class="comment"># tcp4     0    0  *.8118             *.*    LISTEN</span></span><br></pre></td></tr></table></figure>
-<p>查看进程</p>
+<ul>
+<li>查看进程</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep privoxy</span><br></pre></td></tr></table></figure>
 <h3 id="配置-zshrc-OR-bashrc"><a href="#配置-zshrc-OR-bashrc" class="headerlink" title="配置 ~/.zshrc OR ~/.bashrc"></a>配置 <em>~/.zshrc</em> OR <em>~/.bashrc</em></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">proxy_off</span></span>()&#123;</span><br><span class="line">    <span class="built_in">unset</span> http_proxy</span><br><span class="line">    <span class="built_in">unset</span> https_proxy</span><br><span class="line">    <span class="built_in">echo</span> -e <span class="string">"Bye~"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">proxy_on</span></span>() &#123;</span><br><span class="line">    <span class="built_in">export</span> no_proxy=<span class="string">"localhost,127.0.0.1,localaddress,.localdomain.com"</span></span><br><span class="line">    <span class="built_in">export</span> http_proxy=<span class="string">"http://127.0.0.1:8118"</span></span><br><span class="line">    <span class="built_in">export</span> https_proxy=<span class="variable">$http_proxy</span></span><br><span class="line">    <span class="built_in">echo</span> -e <span class="string">"Enjoy~"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>记得 <code>source ~/.zshrc</code></p>

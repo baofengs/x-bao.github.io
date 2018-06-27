@@ -336,6 +336,7 @@ video {
   font-weight: normal;
   line-height: 1.5;
   margin: 1.1em 0;
+  margin-bottom: 0;
 }
 .echo h1 {
   font-size: 30px;
@@ -356,11 +357,12 @@ video {
   font-size: 1rem;
 }
 .echo p {
-  margin: 1em 0;
+  margin: 0.5em 0;
   font-size: 16px;
   font-size: 1.142857142857143rem;
   text-align: justify;
-  line-height: 1.8;
+  line-height: 1.6;
+  margin-top: 0;
 }
 .echo address,
 .echo blockquote,
