@@ -2,7 +2,7 @@
 title: Ubuntu 之旅
 date: 2018-06-27 09:24:49
 tags: ['Ubuntu', '问题', '技巧']
-photos: ['https://imgs.sanbaofengs.com/18-6-27/98203735.jpg']
+photos: ['https://imgs.sanbaofengs.com/18-6-27/98203735.jpg', 'https://imgs.sanbaofengs.com/18-6-27/3962079.jpg', 'https://imgs.sanbaofengs.com/18-6-27/55313682.jpg', 'https://imgs.sanbaofengs.com/18-6-27/61017399.jpg', 'https://imgs.sanbaofengs.com/18-6-27/69509897.jpg']
 ---
 
 本文记录在使用 Ubuntu 过程中遇到的问题，使用技巧以及相关解决方案。
