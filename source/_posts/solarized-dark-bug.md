@@ -23,3 +23,9 @@ Solarized Dark 中有一个颜色设置错了。见下图
 ## 效果如下
 
 ![解决后的效果图](https://imgs.sanbaofengs.com/18-6-28/64963089.jpg)
+
+## 我错了
+
+貌似 **coreutils** 还是有用的。Solarized Dark 配合这个使用才能达到高亮不同文件的效果。但是，还是太麻烦了。晚点我会去改 Solarized Dark 的配置，然后放出来。
+
+不折腾会死星人~~~
