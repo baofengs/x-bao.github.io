@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sanbaofengs.com/2018/06/27/ubuntu-usage/</loc>
+    
+    <lastmod>2018-06-29T10:40:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sanbaofengs.com/2018/06/28/solarized-dark-bug/</loc>
     
-    <lastmod>2018-06-28T06:11:22.000Z</lastmod>
+    <lastmod>2018-06-29T04:37:47.000Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://sanbaofengs.com/2018/06/25/command-line-proxy/</loc>
     
     <lastmod>2018-06-27T03:41:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sanbaofengs.com/2018/06/27/ubuntu-usage/</loc>
-    
-    <lastmod>2018-06-27T03:18:43.000Z</lastmod>
     
   </url>
   
