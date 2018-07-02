@@ -195,9 +195,82 @@ sudo locale-gen
 
 参考链接：https://www.douban.com/note/362250557/
 
-## 设置用户
+## 用户管理
 
-http://blog.sina.com.cn/s/blog_a954325f0101cpx8.html
+通用选项
+
+- `-c comment`：指定注释性描述
+- `-d dir`：指定用户主目录；若此目录不存在，则使用`-m`选项，创建主目录
+- `-g 用户组`：指定用户所属用户组
+- `-G 用户组, 用户组`：指定用户所属附加组
+- `-s $SHELL`：指定用户登录 shell
+- `-y 用户号`：指定用户号，若同时有 `-o` 选项，可以重复适应其他用户的标识号
+
+**新增用户**
+
+useradd
+
+```bash
+useradd -d /home/sam -m sam
+```
+
+创建用户 *sam*，同时指定主目录为 */home/sam*
+
+```bash
+userass -s /bin/sh -g group -G adm,root gem
+```
+
+创建用户 *gem*，同时指定登录 shell 为 */bin/sh*，用户组为 *group*，附加组为 *adm, root*
+
+**修改用户**
+
+usermod
+
+```bash
+usermod -s /usr/bin/zsh -d /home/sss -g sam
+```
+
+修改用户 *sam*，将登录 shell 改为 */usr/bin/zsh*，用户组改为 */home/sss*
+
+**删除用户**
+
+userdel
+
+```bash
+userdel sam
+```
+
+删除用户 *sam*
+
+```bash
+userdel -r sam
+```
+
+删除用户 *sam*，同时删除用户的主目录
+
+**修改密码**
+
+passwd [-i infosystem [-l location]] [-u authname] [user]
+
+- -l 锁定，禁用帐号
+- -u 解锁
+- -d 使帐号无密码
+- -f 用户下次登录时强制修改密码
+
+**注意**：新创建的用户，如果没有指定密码，默认处于锁定状态，无法使用
+
+```
+passwd sam
+# 输入两次同样的密码即可
+```
+
+**禁用用户**
+
+```bash
+passwd -l sam
+```
+
+参考链接：http://blog.sina.com.cn/s/blog_a954325f0101cpx8.html
 
 ## Ubuntu 安装 [fzf](https://github.com/junegunn/fzf)
 
@@ -212,4 +285,4 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 ## 使用 fd 替代 find
 
-https://github.com/sharkdp/fd
+详情：https://github.com/sharkdp/fd
