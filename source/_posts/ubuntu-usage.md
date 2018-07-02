@@ -286,3 +286,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ## 使用 fd 替代 find
 
 详情：https://github.com/sharkdp/fd
+
+## 内网穿透
+
+参考链接：https://github.com/fatedier/frp
