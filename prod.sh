@@ -1,5 +1,4 @@
 #!/bin/sh
-
 if ! git diff-index --quiet HEAD --; then
 
 # commit
