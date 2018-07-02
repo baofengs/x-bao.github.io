@@ -10,4 +10,6 @@ git push origin blog
 # generate posts && deploy
 hexo g
 hexo d
+else
+echo 'Nothing has changed...'
 fi
