@@ -25,4 +25,15 @@ tags: ['Web', '概念', '名词解释']
 
 参考链接：[BLOB 数据类型 - IBM](https://www.ibm.com/support/knowledgecenter/zh/SSGU8G_12.1.0/com.ibm.sqlr.doc/ids_sqr_098.htm)
 
+## MECE 分析法
+
+MECE，是 Mutually Exclusive Collectively Exhausitive，中文意思是“相互独立，完全穷尽”。也就是对于一个重大的议题，能够做到不重叠、不遗漏的分类，而且能够借此有效把握问题的核心，并解决问题的方法。
+
+不遗漏、不重叠含义：
+
+- 各部分之间相互独立（Mutually Exclusive）
+- 所有部分完全穷尽（Collectively Exhaustive）
+
+参考链接：[MECE分析法](http://wiki.mbalib.com/wiki/MECE%E5%88%86%E6%9E%90%E6%B3%95)
+
 PS：目前可能不知道具体的分类，把见到的不熟悉的一些 web 开发相关的概念，统统在这里记录一下。在写的过程中，可能会有 web 开发相关以外的一些概念，也会同样记录在这里。差不多了再进行具体的分类吧~
