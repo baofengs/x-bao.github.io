@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1.0"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><link rel="alternate" href="https://sanbaofengs.com" hreflang="zh-Hans"><meta name="google-site-verification" content="yVLudwcqIQlJbqhCeKLJZ8W_I1OJeVE8p30fz1mRhLM"><meta name="baidu-site-verification" content="lGmVtKnPAU"><meta name="author" content="San Baofeng"><meta name="description" content="If I Rest, I Rust"><link rel="alternative" href="/atom.xml" title="San Baofeng's" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><script>var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?" + 'f00d6c21ad53bcc5d93c0a390afc84a7';
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();</script><title>Command + Q 误操作终极解决方案 - San Baofeng's</title><link rel="stylesheet" href="/css/main.css"><script src="/js/jquery-3.1.1.min.js"></script><script src="/js/fancybox/jquery.fancybox.min.js"></script></head><body style="opacity:0"><header class="head"><h1 class="head-title u-fl"><a href="/">San Baofeng's</a></h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a class="head-nav__link" href="/archives/">カタログ/（目录）</a></li></ul></nav></header><nav class="post-nav"><a class="nav-item next" href="/2018/07/12/javascript-encode-html/"><i class="icon-arrow-right"></i><span class="nav-item-title nav-item-title-right">使用 JavaScript 对 HTML 编码</span></a></nav><main class="main"><article class="post"><header class="post__head"> <h1 class="post__title"><a href="/2018/07/12/slow-quit-apps-by-cmd-q/">Command + Q 误操作终极解决方案</a></h1><time class="post__time" datetime="2018-07-12T07:50:26.000Z">07-12, 2018</time><div class="post__main echo"><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>使用快捷键是提升工作效率的最好方法。但是误触某个快捷键，比如 <code>command + q</code>，又是让人最头疼最难受的事。Google 一下，你会发现大家都被这个万恶的快捷键所折磨。有人建议改键，使用其他快捷键替换 <code>command + q</code>，但是这并不是一个优雅的解决方案。</p>
+<p>这里推荐一个 Mac App，<a href="https://github.com/dteoh/SlowQuitApps" target="_blank" rel="noopener">Slow Quit Apps</a>，它能够全局监控<code>command + q</code>，延时一段时间（文档说是 1 秒）之后才真正触发 <code>command + q</code> ，给你一个缓冲时间，这个东西对所有的 Mac App 有效。</p>
+<h2 id="体验感受"><a href="#体验感受" class="headerlink" title="体验感受"></a>体验感受</h2><p>有第一条就够了，其他的不重要</p>
+<ul>
+<li><strong>监控所有 App，简单有效的根除痛点</strong></li>
+<li>没有图形界面<ul>
+<li>难以获取 App 运行状态</li>
+<li>配置不友好，只能通过命令行进行</li>
+<li>配置后必须重启</li>
+</ul>
+</li>
+<li>如果加入开启启动，每次启动程序都会有提示对话框</li>
+</ul>
+<h2 id="安装-SlowQuitApps"><a href="#安装-SlowQuitApps" class="headerlink" title="安装 SlowQuitApps"></a>安装 SlowQuitApps</h2><p><strong>使用安装包</strong></p>
+<p>在<a href="https://github.com/dteoh/SlowQuitApps/releases" target="_blank" rel="noopener">这里</a>下载，解压安装即可。</p>
+<p><strong>Homebrew</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap dteoh/sqa</span><br><span class="line">brew cask install slowquitapps</span><br></pre></td></tr></table></figure>
+<h2 id="更新-SlowQuitApps"><a href="#更新-SlowQuitApps" class="headerlink" title="更新 SlowQuitApps"></a>更新 SlowQuitApps</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew cask reinstall slowquitapps</span><br><span class="line">killall SlowQuitApps</span><br><span class="line"></span><br><span class="line">OR</span><br><span class="line"></span><br><span class="line">brew cu slowquitapps</span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><strong>查看配置文件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults <span class="built_in">read</span> com.dteoh.SlowQuitApps</span><br></pre></td></tr></table></figure>
+<p><strong>修改延时时间</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 时间改为 5S</span></span><br><span class="line">defaults write com.dteoh.SlowQuitApps delay -int 5000</span><br></pre></td></tr></table></figure>
+<p><strong>白名单设置</strong></p>
+<p>加入白名单的应用将会直接触发 <code>command + q</code> 事件，具体操作步骤：</p>
+<p>获取应用的 bundle ID，”Note” 为例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">osascript -e <span class="string">'id of app "Notes"'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># com.apple.Notes</span></span><br></pre></td></tr></table></figure>
+<p>加入白名单</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.dteoh.SlowQuitApps whitelist -array-add com.apple.Notes</span><br></pre></td></tr></table></figure>
+<p>查看白名单列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">defaults <span class="built_in">read</span> com.dteoh.SlowQuitApps whitelist</span><br><span class="line"></span><br><span class="line"><span class="comment"># (</span></span><br><span class="line"><span class="comment">#     "com.apple.Notes"</span></span><br><span class="line"><span class="comment"># )</span></span><br></pre></td></tr></table></figure>
+<p>清空白名单</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults delete com.dteoh.SlowQuitApps whitelist</span><br></pre></td></tr></table></figure>
+<p><strong>黑名单模式</strong></p>
+<p>在这个模式下，只有加入黑名单的应用才会被 SlowQuitApps 监控，即使用<code>command + q</code>时会有延时。</p>
+<p>启用黑名单模式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.dteoh.SlowQuitApps invertList -bool YES</span><br></pre></td></tr></table></figure>
+<p>关闭黑名单模式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults delete com.dteoh.SlowQuitApps invertList</span><br></pre></td></tr></table></figure>
+<h2 id="关于配置命令"><a href="#关于配置命令" class="headerlink" title="关于配置命令"></a>关于配置命令</h2><p>这里的配置命令第一次接触，感觉比较奇葩，Google 了一下，发现这些命令是真的好玩儿。这些命令出自于 <a href="https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html" target="_blank" rel="noopener">AppleScript</a>。这里推荐几个资源，后期再掏出来玩儿玩儿。</p>
+<ul>
+<li><strong>官方文档</strong>：<a href="https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html" target="_blank" rel="noopener">Introduction to AppleScript Language Guide</a></li>
+<li><strong>gayhub</strong>：<a href="https://github.com/herrbischoff/awesome-macos-command-line" target="_blank" rel="noopener">herrbischoff/awesome-macos-command-line</a></li>
+</ul>
+</div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/Mac/">Mac</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/command-q/">command q</a></li><li class="post__tag__item"><a class="post__tag__link" href="/tags/使用技巧/">使用技巧</a></li></ul></footer></article><div id="comments"></div></main><div id="back-to-top"><i class="icon-arrow-right"></i></div><footer class="foot"><div class="foot-copy"><p class="fooot">&copy; 2017-2018 <a class="link" href="https://github.com/x-bao" target="view_window">San Baofeng</a><a href="http://www.miibeian.gov.cn/" target="view_window" style="color: #fff">（鄂ICP备17002258号-2）</a></p><p class="foot-theme">Powered by <a href="https://hexo.io" target="_blank" class="link">Hexo</a> with Theme <a href="https://github.com/x-bao/hexo-theme-ochuunn" target="_blank" class="link">ochuunn</a></p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-80885450-5');
+ga('send','pageview');</script><!-- 文章详情页才展示评论--><script src="/js/comment.js"></script><script src="/js/autoScroll.js"></script><link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css"><link rel="stylesheet" href="/js/gitment/gitment-default.css"><script src="/js/gitment/gitment.browser.js"></script><script src="/js/scroller.js"></script><script src="/js/main.js"></script></body></html>

@@ -336,7 +336,7 @@ video {
   font-weight: normal;
   line-height: 1.5;
   margin: 1.1em 0;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
 }
 .echo h1 {
   font-size: 30px;
