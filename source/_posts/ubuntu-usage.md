@@ -163,6 +163,15 @@ echo "this just a test" > /usr/local/text.log
 
 形如：function proxy_on () {}
 
+```bash
+function proxy_on() {
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    export http_proxy="http://127.0.0.1:8118"
+    export https_proxy=$http_proxy
+    echo -e "Enjoy~"
+}
+```
+
 ## 语系错误
 
 表现：使用 *ssh* 登录远程机器，执行某些命令时报错。如下
