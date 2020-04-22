@@ -897,11 +897,14 @@ summary:hover {
 .index-nav__list:hover .index-nav__item {
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.075);
 }
+.index-nav__list:hover .index-nav__item:hover {
+  background-color: #f9f9f9;
+}
 .index-nav__list:hover .Diary {
   top: -93px;
   transform: perspective(125px) rotateX(25deg);
 }
-.index-nav__list:hover .Slaughter {
+.index-nav__list:hover .Arts {
   top: -43px;
   transform: perspective(125px) rotateX(-25deg);
 }
@@ -924,7 +927,7 @@ summary:hover {
   top: -93px;
   transform: perspective(125px) rotateX(25deg);
 }
-.index-nav__list.open .Slaughter {
+.index-nav__list.open .Arts {
   top: -43px;
   transform: perspective(125px) rotateX(-25deg);
 }
