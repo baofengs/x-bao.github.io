@@ -674,6 +674,9 @@ table tr td :last-child {
 .index-wrapper headerparticles-oli-wrapper {
   z-index: 10;
 }
+.index-wrapper .head.index {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 25px 50px 0 rgba(0,0,0,0.1);
+}
 #particles-oli-wrapper {
   position: fixed;
   top: 0;
@@ -710,9 +713,6 @@ table tr td :last-child {
 }
 .foot .link:hover {
   text-decoration: underline;
-}
-.index-full-page {
-  overflow: hidden;
 }
 .foot-theme {
   margin-top: 1rem;
@@ -1404,4 +1404,9 @@ summary:hover {
   .index-nav__list .Slaughter {
     order: 2;
   }
+}
+html {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
